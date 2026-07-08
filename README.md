@@ -1,4 +1,4 @@
-# 🚨 SilentSOS Advanced Pro
+# 🚨 SilentSOS
 
 A Raspberry Pi Pico-based emergency alert system built with **MicroPython** and simulated using **Wokwi**. The system provides manual SOS activation, fall detection, simulated GPS location, and SMS notification for emergency situations.
 
@@ -47,7 +47,7 @@ A Raspberry Pi Pico-based emergency alert system built with **MicroPython** and 
 ## Project Structure
 
 ```
-SilentSOS-Advanced-Pro/
+SilentSOS/
 ├── main.py
 ├── diagram.json
 ├── README.md
