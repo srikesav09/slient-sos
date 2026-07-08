@@ -1,101 +1,88 @@
-# SilentSOS
+# 🚨 SilentSOS Advanced Pro
 
-An offline emergency alert system built using Raspberry Pi Pico and simulated in Wokwi.
+A Raspberry Pi Pico-based emergency alert system built with **MicroPython** and simulated using **Wokwi**. The system provides manual SOS activation, fall detection, simulated GPS location, and SMS notification for emergency situations.
 
-## Features
+## ✨ Features
 
-- Double press panic button to unlock
-- Manual SOS activation
-- Fall detection using analog sensor
-- Buzzer and LED emergency alert
-- Stop button to cancel alert
-- Network switch to simulate SMS sending
-- Simulated GPS coordinates
+- 🔒 Double-press security unlock
+- 🚨 Manual SOS button
+- 🤕 Fall detection using analog sensor
+- 📍 Simulated GPS location
+- 📩 Simulated SMS notification
+- 🔊 LED and buzzer emergency alarm
+- 🛑 Stop button to cancel alarm
+- 🌐 Network switch to enable/disable SMS
 
----
-
-## Components
+## 🛠 Components
 
 - Raspberry Pi Pico
-- Push Button (Panic)
-- Push Button (Stop)
 - LED
 - Active Buzzer
+- Push Button (Panic)
+- Push Button (Stop)
 - Slide Switch
-- Potentiometer (Fall Sensor Simulation)
+- Potentiometer (Sensor Simulation)
 
----
-
-## Pin Connections
+## GPIO Connections
 
 | Component | GPIO |
-|----------|------|
+|-----------|------|
 | LED | GP13 |
 | Buzzer | GP14 |
 | Panic Button | GP15 |
 | Stop Button | GP16 |
 | Network Switch | GP17 |
-| Sensor | GP26 (ADC0) |
+| Potentiometer | GP26 |
 
----
+## How It Works
 
-## Working
+1. Device starts in a locked state.
+2. Double-press the panic button within one second to unlock.
+3. Press the panic button again to activate SOS.
+4. GPS coordinates are generated.
+5. If the network switch is ON, an SMS containing the GPS location is simulated.
+6. LED and buzzer flash continuously until the stop button is pressed.
+7. Fall detection automatically triggers the same emergency procedure.
 
-### Unlock
-
-Double press the panic button within one second to unlock the device.
-
-### Manual SOS
-
-After unlocking, pressing the panic button again starts the emergency alert.
-
-### Fall Detection
-
-The potentiometer simulates an impact sensor.
-
-If a high analog value is detected followed by a low value for several seconds, a fall is assumed.
-
-### SMS
-
-When the Network switch is ON, the system prints a simulated SMS with GPS coordinates.
-
-### Alert
-
-The LED and buzzer blink continuously until the Stop button is pressed.
-
----
-
-## File Structure
+## Project Structure
 
 ```
-.
+SilentSOS-Advanced-Pro/
 ├── main.py
 ├── diagram.json
-├── wokwi.toml
-└── README.md
+├── README.md
+├── .gitignore
+└── LICENSE
 ```
-
----
 
 ## Simulation
 
 https://wokwi.com/projects/461846617350223873
 
----
+## Technologies
+
+- MicroPython
+- Raspberry Pi Pico
+- Wokwi Simulator
+- Embedded Systems
+- IoT
 
 ## Future Improvements
 
-- MPU6050 support
+- MPU6050 Accelerometer
 - GPS Module
 - GSM Module
-- Cloud Notification
-- Mobile App
-- Battery Monitoring
-
----
+- OLED Display
+- Mobile App Integration
+- Cloud Notifications
 
 ## Author
 
 **Srikesav M**
 
-Built using MicroPython and Wokwi.
+B.Tech Information Technology  
+PSG College of Technology
+
+## License
+
+MIT License
