@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "author": "SilentSOS Advanced Pro",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led",
+      "top": -22.8,
+      "left": 128.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzz",
+      "top": -45.6,
+      "left": 193.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "panic",
+      "top": -3.4,
+      "left": -96,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "stop",
+      "top": 60,
+      "left": -100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "net",
+      "top": 120,
+      "left": -100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "sensor",
+      "top": -106.9,
+      "left": -0.2,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    ["pico:GP13", "led:A", "green", []],
+    ["led:C", "pico:GND", "red", []],
+
+    ["pico:GP14", "buzz:1", "green", []],
+    ["buzz:2", "pico:GND", "red", []],
+
+    ["pico:GP15", "panic:1", "green", []],
+    ["panic:2", "pico:GND", "red", []],
+
+    ["pico:GP16", "stop:1", "green", []],
+    ["stop:2", "pico:GND", "red", []],
+
+    ["pico:GP17", "net:1", "green", []],
+    ["net:2", "pico:GND", "red", []],
+
+    ["sensor:SIG", "pico:GP26", "green", []],
+    ["sensor:VCC", "pico:3V3", "red", []],
+    ["sensor:GND", "pico:GND", "red", []]
+  ],
+  "dependencies": {}
+}
